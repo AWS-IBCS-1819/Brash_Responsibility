@@ -1,8 +1,24 @@
-// sample.jave by rashida
-public class sample{
+//AboutMe.java by Rashida
+// 9-10-18
 
-public static void main(String[] args) {
-  system.out.println("simple)
+import java.util.*;
+
+public class AboutMe{
+
+  public static String name;
+  public static String hairColor;
+  public static Integer age;
+
+public AboutMe() {
+  name = "Rashdia";
+  hairColor = "Black";
+  age = 17;
+}
+
+public static void main (String)[] args) {
+
+  AboutMe Rashida = new AboutMe();
+  system.out.println("Well"+ Rashida.name);
  }
 
 }
