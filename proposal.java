@@ -12,11 +12,11 @@ public class proposal {
       StringBuilder myStr = new StringBuilder(); // StringBuilder is a object
 
       try {
-        File randtxt = new File ("proposal.txt");
-        Scanner sc = new  Scanner (randtxt);
+        File proposal = new File ("proposal.txt");
+        Scanner sc = new  Scanner (proposal);
 
       while (sc.hasNext()); //checks to see if out file is empty
-        myStr.append (sc.next());
+        myStr.append (sc.next() + " ");
       }
 
     catch (FileNotFoundException e) {
@@ -25,5 +25,7 @@ public class proposal {
     }
 
     System.out.println(myStr);
-  }
+
+      }
+
 }
