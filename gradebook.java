@@ -35,7 +35,7 @@ public class gradebook {
   if (userIn.equals ("5")) {
     System.out.println ("The class subject and teacher was" + )
   }
-  if (userIn.quals ("6")) {
+  if (userIn.equals ("6")) {
     System.out.println ("The student roster was" + )
   }
 
@@ -47,10 +47,12 @@ public class gradebook {
       Str1.append (sc.names());
       Str2.next (sc.grades());
 
+      catch (FileNotFoundException e) {
+        e.printStackTrace ();
+      }
     }
   }
-  catch  (FileNotFoundException e) {
-    e.printStackTrace();
+  
 
   /*  public static double mean (double [] m) {
       double sum = 0;
