@@ -17,62 +17,62 @@ public class gradebook {
     System.out.println("7. Quit");
 
   StringBuilder myStr = new StringBuilder();
-  Scanner In = new Scanner; //scan user input
+  Scanner In = new Scanner(System.in); //scan user input
   String userIn = newIn.nextLine ();
 
   if (userIn.equals ("1")) {
-    System.out.println ("The mean grade was" + );
+    System.out.println ("The mean grade was");
   }
   else if (userIn.equals ("2")) {
-    Sytem.out.println ("The median grade was" + );
+    Sytem.out.println ("The median grade was");
   }
   else if (userIn.equals ("3")) {
-    System.out.println ("The top grade was" + );
+    System.out.println ("The top grade was");
   }
   else if (userIn.equals ("4")) {
-    System.out.println ("The lowest grade was" + );
+    System.out.println ("The lowest grade was");
   }
   else if (userIn.equals ("5")) {
-    System.out.println ("The class subject and teacher was" + );
+    System.out.println ("The class subject and teacher was");
   }
   else if (userIn.equals ("6")) {
-    System.out.println ("The student roster was" + );
+    System.out.println ("The student roster was");
   }
-  else if (userIn2.equals("quit")||userIn2.equals("Quit")||);{
+  else if (userIn2.equals("7")){
     System.exit(0);
   }
   else{
     System.out.println("this is not one of the option, choose again(from 1 to 6)");
-    Scanner In1 = new Scanner;
+    Scanner In1 = new Scanner (System.in);
     String userIn2 = newIn1.nextLine();
     System.out.println("or do you want to quit?(enter 7)");
-
+}
   if (userIn2.equals ("1")) {
-    System.out.println ("The mean grade was" + );
+    System.out.println ("The mean grade was");
   }
   else if (userIn2.equals ("2")) {
-    Sytem.out.println ("The median grade was" + );
+    Sytem.out.println ("The median grade was");
   }
   else if (userIn2.equals ("3")) {
-    System.out.println ("The top grade was" + );
+    System.out.println ("The top grade was");
   }
   else if (userIn2.equals ("4")) {
-    System.out.println ("The lowest grade was" + );
+    System.out.println ("The lowest grade was");
   }
   else if (userIn2.equals ("5")) {
-    System.out.println ("The class subject and teacher was" + )
+    System.out.println ("The class subject and teacher was");
   }
   else if (userIn2.equals ("6")) {
-    System.out.println ("The student roster was" + )
+    System.out.println ("The student roster was");
   }
-  else if (userIn2.equals("7")||);{
+  else if (userIn2.equals("7")){
     System.exit(0);
   }
   else {
     System.out.println("Stop typing nonsense and bother the system. Try again later!");
     System.exit(0);
   }
-  }
+
 
   //break up the stringbuilder into name and Number
 
@@ -82,14 +82,13 @@ public class gradebook {
       File Grade = new File ("grades.txt");
       Scanner sc = new  Scanner (grades);
 
-    while (sc.hasNext());
+    while (sc.hasNext()); {
       myStr.append (sc.next() + " ");
-
-      catch (FileNotFoundException e) {
-        e.printStackTrace ();
-      }
     }
-
+  }
+    catch (FileNotFoundException e) {
+      e.printStackTrace ();
+}
 
   }
 }
