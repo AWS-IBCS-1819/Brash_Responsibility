@@ -1,11 +1,11 @@
 // Gradebook.java by Rashida and Julia
 // 9-19-18
 import java.util.*;
-import java.io.*;
+import java.io.*;// import all the printers
 
-public class gradebook {
+public class gradebook { // create class
 
-  public static Integer mean;
+  public static Integer mean; // create a variable to hold the answer to mean
 
   public static void main(String [] args) { //main method
 
@@ -33,10 +33,10 @@ public class gradebook {
     pro.append(sc.next()+ " ");
 
     while (sc.hasNext()) {
-      myStr.append (sc.next() + " ");
+      myStr.append (sc.next() + " ");// append all the names into the StrinngBuilder for names
       myStr.append (sc.next() + " " + "\n");
-      bla.append(sc.next());
-      grade.append(sc.next());
+      bla.append(sc.next()); // append all : into the stringbuilder for :
+      grade.append(sc.next()); // append all grades into the stringbuilder for grades
 
     }
 
@@ -44,7 +44,7 @@ public class gradebook {
   catch (FileNotFoundException e) {
     e.printStackTrace ();
   }
-
+// create the instant value
   int numO = 0;
   Double sum = 0.0;
   Double top = 0.0;
@@ -54,11 +54,11 @@ public class gradebook {
   int C = 0;
   int D = 0;
   int F = 0;
-  for (int i = 0; i < grade.length (); i = i + 5){
+  for (int i = 0; i < grade.length (); i = i + 5){ //create a loop to get all numbers in the string into the double
   Double d = Double.parseDouble (grade.substring (i, i + 4));
   numO++;
   sum = sum + d;
-  if (top < d){
+  if (top < d){ //if loop for top and low
     top = d;
   }
   else if (low > d){
@@ -68,7 +68,7 @@ public class gradebook {
     top = top;
     low = low;
   }
-  if (d >= 90.0){
+  if (d >= 90.0){ // if lop for grade spread
     A++;
   }
   else if (d >= 80.0){
@@ -84,8 +84,9 @@ public class gradebook {
     F++;
   }
 }
-  Double mean = sum / numO;
+  Double mean = sum / numO; //final mean
 
+while (true){ //while loop so the user can do it over and over again
   Scanner In = new Scanner(System.in); //scan user input
   String userIn = In.nextLine ();
 
@@ -152,18 +153,9 @@ public class gradebook {
     System.exit(0);
   }
 }
+}
 
-  //break up the stringbuilder into name and Number
 
-/*yourStringBuilder.substring ());
-// method for converting integers back to strings
-Integer.toString(yourNumber);
-
-// method for converting doubles back to strings
-Double.toSting(yourNumber);
-
-// method for finding the number of characters in yourStringBuilder
-youStringBuilder.length();*/
 
 
   }
