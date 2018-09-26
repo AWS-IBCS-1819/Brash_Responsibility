@@ -5,6 +5,8 @@ import java.io.*;
 
 public class gradebook {
 
+  public static Integer mean;
+
   public static void main(String [] args) { //main method
 
     System.out.println ("Welcome to the Student Gradebook, what would you like to see");
@@ -14,44 +16,121 @@ public class gradebook {
     System.out.println ("4. Lowest Grade");
     System.out.println ("5. Class Subject and Teacher");
     System.out.println ("6. Student Roster");
-    System.out.println("7. Quit");
+    System.out.println ("7. Exit");
 
-  StringBuilder myStr = new StringBuilder();
+  StringBuilder myStr = new StringBuilder();// building a stringbuilder for all the names
+  StringBuilder pro = new StringBuilder();// building a stringbuilder for the professor and class
+  StringBuilder grade = new StringBuilder(); // building a srtingbuilder to get rid of the :
+  StringBuilder bla = new StringBuilder(); // building a stringbuilder for all the grades
+
+  try { //see if our text is empty
+    File Grade = new File ("grades.txt");
+    Scanner sc = new Scanner (Grade);
+    pro.append(sc.next()+ " ");
+    pro.append(sc.next()+ " ");
+    pro.append(sc.next()+ " ");
+    pro.append(sc.next()+ " ");
+    pro.append(sc.next()+ " ");
+
+    while (sc.hasNext()) {
+      myStr.append (sc.next() + " ");
+      myStr.append (sc.next() + " " + "\n");
+      bla.append(sc.next());
+      grade.append(sc.next());
+
+    }
+
+  }
+  catch (FileNotFoundException e) {
+    e.printStackTrace ();
+  }
+
+  int numO = 0;
+  Double sum = 0.0;
+  Double top = 0.0;
+  Double low = 100.0;
+  int A = 0;
+  int B = 0;
+  int C = 0;
+  int D = 0;
+  int F = 0;
+  for (int i = 0; i < grade.length (); i = i + 5){
+  Double d = Double.parseDouble (grade.substring (i, i + 4));
+  numO++;
+  sum = sum + d;
+  if (top < d){
+    top = d;
+  }
+  else if (low > d){
+    low = d;
+  }
+  else{
+    top = top;
+    low = low;
+  }
+  if (d >= 90.0){
+    A++;
+  }
+  else if (d >= 80.0){
+    B++;
+  }
+  else if (d >= 70){
+    C++;
+  }
+  else if (d >= 60){
+    D++;
+  }
+  else {
+    F++;
+  }
+}
+  Double mean = sum / numO;
+
   Scanner In = new Scanner(System.in); //scan user input
-  String userIn = newIn.nextLine ();
+  String userIn = In.nextLine ();
 
   if (userIn.equals ("1")) {
     System.out.println ("The mean grade was");
+    System.out.println(mean);
+
   }
   else if (userIn.equals ("2")) {
-    Sytem.out.println ("The median grade was");
+    System.out.println ("The grade spread was"
+    + "\n A: " + Integer.toString(A)
+    + "\n B: " + Integer.toString(B)
+    + "\n C: " + Integer.toString(C)
+    + "\n D: " + Integer.toString(D)
+    + "\n F: " + Integer.toString(F));
   }
   else if (userIn.equals ("3")) {
     System.out.println ("The top grade was");
+    System.out.println(top);
   }
   else if (userIn.equals ("4")) {
     System.out.println ("The lowest grade was");
+    System.out.println(low);
   }
   else if (userIn.equals ("5")) {
     System.out.println ("The class subject and teacher was");
-  }
+    System.out.println(pro);
+      }
   else if (userIn.equals ("6")) {
     System.out.println ("The student roster was");
+    System.out.println(myStr);
   }
-  else if (userIn2.equals("7")){
+  else if (userIn.equals("7")){
     System.exit(0);
   }
   else{
     System.out.println("this is not one of the option, choose again(from 1 to 6)");
-    Scanner In1 = new Scanner (System.in);
-    String userIn2 = newIn1.nextLine();
-    System.out.println("or do you want to quit?(enter 7)");
-}
+    Scanner In2 = new Scanner (System.in);
+    String userIn2 = In2.nextLine();
+    System.out.println("or do you want to exit?(enter 7)");
   if (userIn2.equals ("1")) {
     System.out.println ("The mean grade was");
   }
   else if (userIn2.equals ("2")) {
-    Sytem.out.println ("The median grade was");
+    System.out.println ("The grade spread was");
   }
   else if (userIn2.equals ("3")) {
     System.out.println ("The top grade was");
@@ -72,23 +151,20 @@ public class gradebook {
     System.out.println("Stop typing nonsense and bother the system. Try again later!");
     System.exit(0);
   }
-
+}
 
   //break up the stringbuilder into name and Number
 
+/*yourStringBuilder.substring ());
+// method for converting integers back to strings
+Integer.toString(yourNumber);
 
+// method for converting doubles back to strings
+Double.toSting(yourNumber);
 
-    try { //see if our text is empty
-      File Grade = new File ("grades.txt");
-      Scanner sc = new  Scanner (grades);
+// method for finding the number of characters in yourStringBuilder
+youStringBuilder.length();*/
 
-    while (sc.hasNext()); {
-      myStr.append (sc.next() + " ");
-    }
-  }
-    catch (FileNotFoundException e) {
-      e.printStackTrace ();
-}
 
   }
 }
