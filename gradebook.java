@@ -68,19 +68,19 @@ public class gradebook { // create class
     top = top;
     low = low;
   }
-  if (d >= 90.0){ // if lop for grade spread
+  if (d >= 90.0){ // if loop for grade spread and 90.0 and up is an A
     A++;
   }
-  else if (d >= 80.0){
+  else if (d >= 80.0){ // 80.0 and up till before 90.0 is a B
     B++;
   }
-  else if (d >= 70){
+  else if (d >= 70){ // 70.0 and up till before 80.0 is a C
     C++;
   }
-  else if (d >= 60){
+  else if (d >= 60){ // 60.0 and up till before 70.0 is a D
     D++;
   }
-  else {
+  else { // and thing lower than before 60 is a F
     F++;
   }
 }
@@ -96,7 +96,7 @@ while (true){ //while loop so the user can do it over and over again
 
   }
   else if (userIn.equals ("2")) {
-    System.out.println ("The grade spread was"
+    System.out.println ("The grade spread was" // what percent of correspond with each grade
     + "\n A: " + Integer.toString(A)
     + "\n B: " + Integer.toString(B)
     + "\n C: " + Integer.toString(C)
