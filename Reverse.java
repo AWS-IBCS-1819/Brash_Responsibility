@@ -6,31 +6,38 @@ import java.util.*;
 
 public class Reverse {
 
-  // the recursive
+  public static String Reverse (String str) {
+
+    if (str.length () ==1)
+      return str;
+    }
+    else{
+      return Character.toString (str.charAt (str.length)) +
+      (Reverse (str.substring (0, str.length()- 1 ));
+    }
+
+
     public static void main (string [] args) {
 
-      System.out.println ("Hello");
+      // the loop
+        public static void main(String [] args) {
 
-      Scanner scan = new Scanner (System.in);
-      String str = scan.nextLine();
-      String Hello = Reverse (str);
+          while (StrB.length () >=1) {
+      result.append (strB.charAt(strB.length() - 1));
+      srtB.deleteCharAt(strB.length() -1);
     }
+          System.out.print(Hello.charAt(i));
 
-    public static String Reverse (String str) {
+  // the recursive
 
-      if (str.length () <=1)
-        return str;
-      }
-      else{
-        return (Reverse (str.substring (1)) + str.charAt (0));
-      }
-  // the loop
-    public static void main(String [] args) {
+      StringBuilder strB = new StringBuilder ("hello");
+      Sring strA = "hello";
 
-      Scanner scan = new Scanner(Sytem.in);
-      String Hello = scan.nextLine();
-      for (int i = Hello.length ()-1; i>0; i--)
-      System.out.print(Hello.charAt(i));
+      StringBuilder result = new StringBuilder ();
+      String res = Reverse (strA);
+      System.out.println ("res");
     }
+  }
+
 
 }
