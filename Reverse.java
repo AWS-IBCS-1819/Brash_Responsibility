@@ -21,7 +21,6 @@ public class Reverse {
       if (str.length () <=1)
         return str;
       }
-
       else{
         return (Reverse (str.substring (1)) + str.charAt (0));
       }
@@ -29,9 +28,9 @@ public class Reverse {
     public static void main(String [] args) {
 
       Scanner scan = new Scanner(Sytem.in);
-      String word = scan.nextLine();
-      for (int i = word.length ()-1; i>0; i--)
-      System.out.print(word.charAt(i));
+      String Hello = scan.nextLine();
+      for (int i = Hello.length ()-1; i>0; i--)
+      System.out.print(Hello.charAt(i));
     }
 
 }
