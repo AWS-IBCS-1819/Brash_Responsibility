@@ -5,29 +5,35 @@ import java.util.*;
 
 public class Deck {
 
-  ArrayList<String> card;
+  ArrayList<String> cards;
 
-  public Deck(){
-    card = new ArrayList<String>();
+  public Deck() {
+    cards = new ArrayList<String>();
+    int count = 1;
+    String name = " ";
 
-    for (int i = 1; i< 14; i++){
-      String num = Integer.toString(i);
-      card.add(" of Diamonds");
+    for (int i = 0; i < 10; i++) {
+      cards.add(count + " of Diamonds");
+      cards.add(count + " of Clubs");
+      cards.add(count + " of Hearts");
+      cards.add(count + " of Spades");
+      count++;
+    }
+
+    for (int i = 0; i < 3; i++) {
+      if (i == 0) {
+        name = "Jack";
+      } else if (i == 1) {
+        name = "Queen";
+      } else if (i == 2) {
+        name = "King";
       }
+      cards.add(name + " of Diamonds");
+      cards.add(name + " of Clubs");
+      cards.add(name + " of Hearts");
+      cards.add(name + " of Spades");
 
-    for (int j = 14; j < 27; j++){
-      String num= Integer.toString (j);
-      card.add(" of Clubs");
-    }
-
-    for (int k= 27; k < 40; k++){
-      String num = Integer.toString (k);
-      card.add(" of Hearts");
-    }
-
-    for (int l = 40; l < 53; l++){
-      String num = Integer.toString (l);
-      card.add(" of Spades");
     }
   }
+
 }
