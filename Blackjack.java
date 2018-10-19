@@ -28,8 +28,8 @@ public class Blackjack {
 public static void main (String[] args) { // main method
 
   Blackjack b = new Blackjack();
-  b.d.reset ();
-  b.d.shuffle ();
+  b.d.reset (); // if you want to restart the game
+  b.d.shuffle (); // to shuffle the deck
 
 
   b.userHand.add(b.d.drawCard ()); // adding a card to someones hand
