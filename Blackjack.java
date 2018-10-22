@@ -25,6 +25,8 @@ public class Blackjack {
     return total;
 }
 
+// public cardName (ArrayList<Card> h);
+
 public static void main (String[] args) { // main method
 
   Blackjack b = new Blackjack();
@@ -32,13 +34,40 @@ public static void main (String[] args) { // main method
   b.d.shuffle (); // to shuffle the deck
 
 
-  b.userHand.add(b.d.drawCard ()); // adding a card to someones hand
+  System.out.println ("You are Playing Blackjack");
 
+  boolean playgame = true; // have something to run the while for running the whole program
 
-  System.out.println ("This is Blackjack");
-  System.out.println ("This is your hand:");
-  System.out.println ("Your options are: \n 1.Hit (Draw Card) \n 2.Stay \n 3.Quit");
-  System.out.println ("value:");
+    while (playgame) {
+      System.out.println ("Your options are: \n 1.Hit (Draw Card) \n 2.Stay \n 3.Quit");
+        Scanner option = new Scanner(System.in);
+    int choice = Integer.valueOf (option.nextLine ());
+
+    if (choice == 1) {
+      b.d.drawCard(b.userHand); // choosing to hit adding another card to your card values
+      System.out.println ("This is your hand:");
+        b.userHand.add(b.d.drawCard ()); // adding a card to someones hand
+      System.out.println ("value:");
+         = b.calculateHand (b.userHand);
+
+    }
+    else if (choice == 2) { //choosing to stay where you are with your card value
+    break; // exits the while loop
+    }
+    else if (choice == 3){ //choosing to quit the game
+      System.out.println ("Do You want to Play again ? \n 1.Yes \n 2.No");
+      break;
+    }
+    if (choice == 1) { //choosing to play again
+
+    }
+    else if (choice == 2){ // choosing to not play another game
+
+      }
+    }
+    if (b.d.calculateHand(b.compHand) <=16) { // the value is less than 16 computer can draw card
+      b.d.drawCard(comphand);
+    }
 
     for (int i = 0; i < 10; i++) {
       Card c = b.d.drawCard ();
@@ -47,6 +76,6 @@ public static void main (String[] args) { // main method
     for (int i = 0; i < b.userHand.size (); i++) {
       System.out.println (b.userHand.get(i).getName());
     }
-  }
 
+  }
 }
