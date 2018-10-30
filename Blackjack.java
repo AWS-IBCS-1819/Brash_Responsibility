@@ -129,9 +129,7 @@ for (int i = 0; i < 2; i++) {
       if  (b.calculateHand(b.compHand) > 21) { // if the dealer hand is higher than 21 then you win
         System.out.println ("Bust \n You Win");
       }
-      /*else if (b.calculateHand(b.compHand) < b.calculateHand(b.userHand)){
-            System.out.println("You Win");
-          } */
+
           else if (b.calculateHand(b.compHand) > b.calculateHand(b.userHand)){
                 System.out.println("You lose, Dealer wins");
               }
@@ -148,7 +146,7 @@ break;
     Scanner option1 = new Scanner (System.in); // scanner for making choices for playing again or not
       int chosen = Integer.valueOf (option1.nextLine ());
 
-   if (chosen.equals ("1")) { //choosing to play again
+   if (chosen == 1) { //choosing to play again
   }
 
   else if (chosen == 2){ // choosing to not play another game
