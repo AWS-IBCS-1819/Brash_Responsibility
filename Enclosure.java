@@ -1,7 +1,6 @@
-//Enclosure.java by Julia and Rashida
-
 public class Enclosure{
 
+  //all comments are pretty similar to the Animal class, just refer to there
   String type;
   String keeper;
   int temp;
