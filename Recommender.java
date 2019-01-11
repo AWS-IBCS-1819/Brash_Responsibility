@@ -28,7 +28,7 @@ public class Recommender {
     File file = new File("collab.txt");
     Scanner collabo = new Scanner(file);
     StringBuilder no = new StringBuilder();
-    String temp = collabo.next();
+    String temp = collabo.next(); 
 
     while (collabo.hasNext()){
       no.append(collabo.next() + " ");
