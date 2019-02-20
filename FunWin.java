@@ -119,29 +119,29 @@ public class FunWin extends Frame implements WindowListener,ActionListener {
               String j = " ";
               String [] x = new String[5];
 
-              x[0]="90";
-              x[1]="80";
-              x[2]="70";
-              x[3]="60";
-              x[4]="50";
+              x[0]="a";
+              x[1]="b";
+              x[2]="c";
+              x[3]="d";
+              x[4]="f";
 
               text.setText(j);
 
               for (int i = 0; i < grd.length; i++) {// from the gradebook to print out the number grades
                 if (i== 0) {
-                  j = "you have an A" + grd[i];
+                  j = "you have an " + grd[i];
                 }
                 else if (i == 1) {
-                  j += "you have a B" + grd[i];
+                  j += "you have a " + grd[i];
                 }
                 else if (i == 2) {
-                  j += "you have a C" + grd[i];
+                  j += "you have a " + grd[i];
                 }
                 else if (i == 3) {
-                  j += "you have a D" + grd[i];
+                  j += "you have a " + grd[i];
                 }
                 else if (i == 4)  {
-                  j +=  "you have a F" + grd[i];
+                  j +=  "you have a " + grd[i];
                 }
             }
 
