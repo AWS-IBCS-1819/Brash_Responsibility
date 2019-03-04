@@ -114,7 +114,7 @@ public class Restaurant extends JFrame implements WindowListener, ActionListener
     add(da);
     da.setBounds(450,500,125,50); //
 
-    cd.setText("");// where yu will write c=some comments
+    cd.setText("");// where yu will write some comments
     add(cd);
     cd.setBackground(Color.black);
     cd.setForeground(Color.green);
