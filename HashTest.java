@@ -6,11 +6,11 @@ public class HashTest {
   public static void main(String[] args) {
 
   ArrayList<Integer> numbers = new ArrayList <Integer>();// a create an ArrayList
-  numbers.add(5); // add numbers
+  numbers.add(1); // add numbers
   numbers.add(2);
-  numbers.add(9);
-  numbers.add(6);
   numbers.add(3);
+  numbers.add(4);
+  numbers.add(5);
 
   Collections.shuffle(numbers); // this is to shuffle the array of numbers
 
@@ -19,8 +19,8 @@ public class HashTest {
   int num1 = numbers.get(0); // get whatever the first number is
 
   if (num1 < 4) { // if the first number is less than 4 the do a * b
-    int a = 12 - numbers.get(0);
-    int b = 13;
+    int a = 12 - numbers.get(0)-numbers.get(2);
+    int b = 13 * numbers.get(3) + numbers.get(4);
     int c = a * b;
 
     numbers.set(0,c);
@@ -28,8 +28,8 @@ public class HashTest {
   }
 
   if (num1 > 4) {
-    int a1 = 24 * numbers.get(2);
-    int b2 = 93 / numbers.get(3);
+    int a1 = 24 * numbers.get(2)*numbers.get(4);
+    int b2 = 93 / numbers.get(3)+numbers.get(0);
     int c3 = a1 + b2;
 
     numbers.set(0,c3);
@@ -38,8 +38,8 @@ public class HashTest {
   int num2 = numbers.get(1);
 
   if (num2 < 7) {
-    int d = 3;
-    int e = 7;
+    int d = 3 + numbers.get(3);
+    int e = 7 * numbers.get(1) - numbers.get(2);
     int f = d * e;
 
     numbers.set(1,f);
@@ -47,7 +47,7 @@ public class HashTest {
   }
 
   if (num2 > 7) { // if change what the number is greater or less than to make the output evenmore random
-    int d1 = 5 + numbers.get(4);
+    int d1 = 5 + numbers.get(4) * numbers.get(4);
     int e2 = 20 - numbers.get(2);
     int f3 = d1 + e2;
 
@@ -57,7 +57,7 @@ public class HashTest {
   int num3 = numbers.get(2);
 
   if (num3 < 3) {
-    int g = 78/ numbers.get(1);
+    int g = 78 * numbers.get(1) + numbers.get(2);
     int h = 31 + numbers.get(4);
     int j = g + h;
 
@@ -67,7 +67,7 @@ public class HashTest {
 
   if (num3 > 3) {
     int g1 = 9 + numbers.get(3);
-    int h2 = 60 - numbers.get(0);
+    int h2 = 60 - numbers.get(0) * numbers.get(0);
     int j3 = g1 + h2;
 
     numbers.set(2,j3);
